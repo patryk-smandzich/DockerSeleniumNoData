@@ -1,7 +1,6 @@
 version: '3.1'
 services:
-    ### Selenium Hub ###
-  selenium-firefox-1:
+  selenium-firefox:
     container_name: selenium-firefox
     image: selenium/node-firefox-debug:3.141
     depends_on:
@@ -18,8 +17,8 @@ services:
     networks:
       main:
         aliases:
-          - selenium-firefox-1
-  selenium-firefox-2:
+          - selenium-firefox
+  selenium-chrome:
     container_name: selenium-chrome
     image: selenium/node-chrome-debug:3.141
     depends_on:
@@ -47,5 +46,5 @@ services:
         aliases:
           - selenium-hub
 networks:
-    main:
-     
+  main:
+
